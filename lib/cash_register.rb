@@ -4,10 +4,10 @@ class CashRegister
   # We set and get all of the methods in attr_accessor
   attr_accessor :total, :discount, :items, :last_transaction
 
-  def initialize(discount=0)
+  def initialize(discount=0, items=[])
     @total = 0
     @discount = discount
-    @items = []
+    @items = items
   end
 
   def add_item(title, price, amt = 1)
